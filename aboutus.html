@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="Icons/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Style/nav_footer.css">
+    <link rel="stylesheet" href="Style/aboutus_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav id="nav-container">
+
+        <div id="menu-container">
+            <ul class="menu">
+                <!-- Menu escondido -->
+                <li class="brand">IHave2Watch</li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">☰</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a class="active-page" href="aboutus.html">About Us</a>
+                        <a href="parteners.html">Partners</a>
+                        <a href="search.html">Explore</a>
+                        <a class="fav" href="list_overview.html" style="display: none;">My Favorites</a>
+                    </div>
+                </li>
+                <!-- Menu não escondido -->
+                <div class="static-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active-page" href="aboutus.html">About Us</a>
+                    </li>
+                    <li><a href="parteners.html">Partners</a>
+                    </li>
+                    <li><a href="search.html">Explore</a></li>
+                    <li><a class="fav" href="list_overview.html" style="display: none;">My Favorites</a></li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="log-sub-container menu">
+            <button onclick="openLogin()" class="nav-btn">Login</button>
+            <button class="nav-btn sign-btn">Sign up</button>
+            <button id="botao-perfil"><img src="Icons/profile.svg" alt="Perfil button"></button>
+            <div id="perfil-menu">
+                <ul>
+                    <li><a href="">My Perfil</a></li>
+                    <li><a href="tic-tac-toe.html">Tic-Tac-Toe</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="idLogin" class="modal">
+
+            <div class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="closeLogin()" class="close-btn" title="Close Modal">&times;</span>
+                    <img class="avatar" src="Images/login_avatar.svg" alt="Login Avatar">
+                </div>
+
+                <div class="login-upcontainer">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="text" placeholder="Enter Password" name="psw" required>
+                    <span id="no-match-psw">Username or password do not match! Try again!</span>
+
+                    <button id="login-btn">Login</button>
+
+                </div>
+
+                <div class="login-bottomcontainer">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <span class="psw">Forgot <a href="#">password</a> ?</span>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="intro">
+        <h1 class="page-head">Welcome to <span class="brand brand-h1">IHave2Watch</span>, your collaborative world of
+            TVs Shows, Movies & More!</h1>
+        <h2 class="subtext">IHave2Watch is an opportunity to bring people together around
+            common interests and create an engaging and interactive experience. Here,
+            we highlight the importance of establishing a welcoming and dynamic atmosphere,
+            facilitating user participation and engagement. Furthermore, we emphasize valuing
+            collaboration between participants, promoting a sense of community. In short,
+            our main goal is to create an inclusive and inspiring environment where
+            everyone feels part of something bigger.
+        </h2>
+        <button class="opportunity-btn">View Opportunities</button>
+    </div>
+
+    <div class="main-container">
+
+        <h2 class="main-head">Our collaborative environment</h2>
+        <div class="environment">
+            <div>
+                <h3>Inclusivity and diversity</h3>
+                <p>Join our discussion and share your voice</p>
+            </div>
+            <div>
+                <h3>Remote friendly</h3>
+                <p>Work flexibly from anywhere, prioritize family and friends</p>
+            </div>
+            <div>
+                <h3>Continuos learning</h3>
+                <p>Embrace growth mindset and continuos development</p>
+            </div>
+        </div>
+
+        <div class="story">
+            <h2>Our Story</h3>
+                <p>The IHave2Watch journey began with three friends who shared an unwavering
+                    passion for films and series. They each had their own unique experiences
+                    and perspectives on what made a film or television production truly special.
+                    However, they faced a common challenge: the difficulty of finding a platform
+                    where they could meaningfully share their opinions and discover new titles
+                    based on recommendations from people with similar tastes.
+                </p>
+                <p>Determined to fill this gap, these friends decided to join forces and create
+                    something extraordinary. After many nights of brainstorming and heated
+                    discussions, the concept of IHave2Watch was born: a space where film and
+                    series lovers from all over the world could connect, share their opinions
+                    and discover new content collaboratively.
+                </p>
+                <p>With tireless dedication, they turned this vision into reality. IHave2Watch
+                    was launched as a film and series review platform, where users could create
+                    personalized profiles, rate productions and write detailed reviews. The app
+                    is designed to not only provide a review platform but also to encourage
+                    constructive discussions and meaningful connections between community
+                    members.
+                </p>
+                <p>IHave2Watch is not just a list building and sharing platform, but a vibrant and diverse
+                    community of cinephiles and series fans from around the world. Our story is
+                    a testament to the power of passion and collaboration, and we're excited to
+                    continue this journey alongside all of you, sharing our love for the world
+                    of entertainment, one film and series at a time.
+                </p>
+        </div>
+
+        <h2 class="team-head">Join our Team</h2>
+
+        <div class="join-team-container">
+            <button class="filter-btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="filter-btn" onclick="filterSelection('engeneering')"> ENGENEERING</button>
+            <button class="filter-btn" onclick="filterSelection('design')"> DESIGN</button>
+            <button class="filter-btn" onclick="filterSelection('finance')"> FINANCE</button>
+            <button class="filter-btn" onclick="filterSelection('commercial')"> COMMERCIAL</button>
+        </div>
+
+        <div class="filter-container">
+            <div class="filterDiv design">
+                <img src="Icons/brush.svg" alt="Design Icon">
+                <p>UI Designer</p>
+            </div>
+            <div class="filterDiv engeneering design">
+                <img src="Icons/gear.svg" alt="Engeneering Icon">
+                <p>Front-end Developer</p>
+            </div>
+            <div class="filterDiv commercial">
+                <img src="Icons/suitcase.svg" alt="Commercial Icon">
+                <p>Product Support</p>
+            </div>
+            <div class="filterDiv design">
+                <img src="Icons/brush.svg" alt="Design Icon">
+                <p>Design Manager</p>
+            </div>
+            <div class="filterDiv design">
+                <img src="Icons/brush.svg" alt="Design Icon">
+                <p>UX Designer</p>
+            </div>
+            <div class="filterDiv engeneering">
+                <img src="Icons/gear.svg" alt="Engeneering Icon">
+                <p>Back-end Developer</p>
+            </div>
+            <div class="filterDiv finance">
+                <img src="Icons/money-bag.svg" alt="Finance Icon">
+                <p>Account Manager</p>
+            </div>
+            <div class="filterDiv finance">
+                <img src="Icons/money-bag.svg" alt="Finance Icon">
+                <p>Financial Analyst</p>
+            </div>
+            <div class="filterDiv commercial">
+                <img src="Icons/suitcase.svg" alt="Commercial Icon">
+                <p>Sales</p>
+            </div>
+            <div class="filterDiv commercial finance">
+                <img src="Icons/money-bag.svg" alt="Finance Icon">
+                <p>Sales Manager</p>
+            </div>
+            <div class="filterDiv commercial">
+                <img src="Icons/suitcase.svg" alt="Commercial Icon">
+                <p>Sales Analyst</p>
+            </div>
+            <div class="filterDiv commercial">
+                <img src="Icons/suitcase.svg" alt="Commercial Icon">
+                <p>Customer service representative</p>
+            </div>
+            <div class="filterDiv finance">
+                <img src="Icons/money-bag.svg" alt="Finance Icon">
+                <p>Financial Manager</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="meet-team-container">
+
+        <div class="card-head">
+            <h2>Meet the <span class="brand brand-h1">IHave2Watch</span> team</h2>
+            <p>Creating a seamless collaborative streaming experience</p>
+        </div>
+
+        <div class="card">
+            <img src="Images/foto perfil.jpg" alt="foto do CEO">
+            <h2>João Altomar</h2>
+            <p class="title">CEO & Founder</p>
+            <a href="https://www.instagram.com/jgaltomar/"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/joao-gabriel-altomar"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/JGAltomar/my_portifolio"><i class="fa fa-github"></i></a>
+            <p><button>Contact</button></p>
+        </div>
+
+    </div>
+
+
+    <footer id="footer-container">
+
+        <div>
+            <span class="brand brand-footer">IHave2Watch</span>
+            <h4 id="head-icons">Connect with us</h4>
+            <a href=""><img class="icons-index" src="Icons/Instagram-Glyph-Color-Logo.svg" alt="Instagarm icon"></a>
+            <a href=""><img class="icons-index" src="Icons/LinkedIn-Icon-Logo.svg" alt="Linkedin icon"></a>
+            <a href=""><img class="icons-index" src="Icons/YouTube-Icon-Full-Color-Logo.svg" alt="YouTube icon"></a>
+            <p><small style="color: white;">© 2024 IHave2Watch - All external content remains the property of the
+                    rightful owner.</small></p>
+        </div>
+
+
+        <div class="footer-link-container">
+            <h4>Our Company</h4>
+            <ul>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Community hub</h4>
+            <ul>
+                <li><a href="parteners.html">Partners</a></li>
+                <li><a href="">Advertising</a></li>
+                <li><a href="">Community Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="">Support</a></li>
+                <li><a href="">Our policy</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+
+<script src="Scripts/aboutus.js"></script>
+<script src="Scripts/logout.js"></script>

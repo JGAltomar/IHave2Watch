@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="shortcut icon" href="Icons/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Style/tic-tac-toe.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style/nav_footer.css">
+</head>
+
+<body>
+
+    <nav id="nav-container">
+
+        <div id="menu-container">
+            <ul class="menu">
+                <!-- Menu escondido -->
+                <li class="brand">IHave2Watch</li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">☰</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="parteners.html">Partners</a>
+                        <a href="search.html">Explore</a>
+                        <a class="fav" href="list_overview.html" style="display: none;">My Favorites</a>
+                        <a class="active-page" href="tic-tac-toe.html" style="display: none;">Tic-Tac-Toe</a>
+                    </div>
+                </li>
+                <!-- Menu não escondido -->
+                <div class="static-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a>
+                    </li>
+                    <li><a href="parteners.html">Partners</a>
+                    </li>
+                    <li><a href="search.html">Explore</a></li>
+                    <li><a class="fav" href="list_overview.html" style="display: none;">My Favorites</a></li>
+                    <li><a class="active-page" href="tic-tac-toe.html" style="display: none;">Tic-Tac-Toe</a></li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="log-sub-container menu">
+            <button onclick="openLogin()" class="nav-btn">Login</button>
+            <button class="nav-btn sign-btn">Sign up</button>
+            <button id="botao-perfil"><img src="Icons/profile.svg" alt="Perfil button"></button>
+            <div id="perfil-menu">
+                <ul>
+                    <li><a href="">My Perfil</a></li>
+                    <li><a href="tic-tac-toe.html">Tic-Tac-Toe</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="idLogin" class="modal">
+
+            <div class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="closeLogin()" class="close-btn" title="Close Modal">&times;</span>
+                    <img class="avatar" src="Images/login_avatar.svg" alt="Login Avatar">
+                </div>
+
+                <div class="login-upcontainer">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" id="uname" placeholder="Enter Username" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="text" id="psw" placeholder="Enter Password" required>
+                    <span id="no-match-psw">Username or password do not match! Try again!</span>
+
+                    <button id="login-btn">Login</button>
+
+                </div>
+
+                <div class="login-bottomcontainer">
+                    <label>
+                        <input id="remember" type="checkbox" checked="checked"> Remember me
+                    </label>
+                    <span class="psw">Forgot <a href="#">password</a> ?</span>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <h1 class="header">Tic-Tac-Toe</h1>
+        <div class="buttons">
+            <button class="2players-btn">2 Players</button>
+            <button class="ai-btn">AI</button>
+        </div>
+        <div class="game-container hide">
+            <div id="blck1" class="blck"></div>
+            <div id="blck2" class="blck"></div>
+            <div id="blck3" class="blck"></div>
+            <div id="blck4" class="blck"></div>
+            <div id="blck5" class="blck"></div>
+            <div id="blck6" class="blck"></div>
+            <div id="blck7" class="blck"></div>
+            <div id="blck8" class="blck"></div>
+            <div id="blck9" class="blck"></div>
+        </div>
+        <h2>Score:</h2>
+        <div class="score-container">
+            <span class="score">
+                <span class="score-x">X</span> :
+                <span class="score-count-x">0</span>
+            </span>
+            <span class="score">
+                <span class="score-o"></span> :
+                <span class="score-count-o">0</span>
+            </span>
+        </div>
+
+        <div hidden>
+            <div class="x">X</div>
+            <div class="o"></div>
+        </div>
+
+        <div class="msg-container" hidden>
+            <p class="msg"></p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="Scripts/tic-tac-toe.js"></script>
+<script src="Scripts/logout.js"></script>

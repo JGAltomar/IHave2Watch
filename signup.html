@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="shortcut icon" href="Icons/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Style/signup_style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="form-head">
+        <h1>Sign up</h1>
+        <h3>Get starded with SignMeUp now!</h3>
+    </div>
+
+    <div class="logo-container">
+        <img class="logo" src="Images/main-logo-transparent.svg" alt="Logo da plataforma">
+    </div>
+
+    <div class="form-container">
+
+        <label for="fName">Your full name</label>
+        <input class="info" type="text" id="fName" placeholder="First Last Name">
+
+        <label for="email">Email</label>
+        <input class="info" type="email" id="email" placeholder="Your email address">
+
+        <label for="username">Username</label>
+        <input class="info" type="text" id="username" placeholder="Choose your username">
+
+        <label for="password">Password</label>
+        <input class="info" type="text" id="password" placeholder="Choose your password">
+
+        <label for="password-confirmation">Confirm your password</label>
+        <input class="info" type="text" id="password-confirmation" placeholder="Type your password again"
+            autocomplete="off" required>
+        <span id="no-match-psw" style="display: none;">Passwords do not match! Try again!</span>
+        <span id="user-pass-req" style="display: none;">Username and password are required</span>
+
+        <p>By creating an account you agree to our <a
+                href="https://www.termsfeed.com/live/ffb779de-6f88-469e-aa85-8b8f73c9d910">Terms & Privacy</a>.</p>
+
+        <button id="join-btn">Join now</button>
+
+        <p class="already-member">Already a member? <a href="index.html">Login</a></p>
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="Scripts/cadastro.js"></script>

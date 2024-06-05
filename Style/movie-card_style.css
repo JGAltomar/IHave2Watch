@@ -1,0 +1,130 @@
+/* Estilos para o cartão do filme */
+.movie-card {
+    position: relative; /* Define a posição relativa para permitir posicionamento absoluto dentro */
+    display: block; /* Define como bloco para ocupar a largura total */
+    width: 800px; /* Largura do cartão */
+    height: auto; /* Altura automática para ajustar ao conteúdo */
+    margin: 100px auto; /* Margens superior e inferior automáticas, margem lateral automática */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites do cartão */
+    border-radius: 10px; /* Borda arredondada */
+    transition: all 0.4s; /* Transição suave para animações */
+    box-shadow: 0px 0px 150px -45px #aa33e6b6; /* Sombra */
+}
+
+/* Altera a sombra ao passar o mouse */
+.movie-card:hover {
+    box-shadow: 0px 0px 120px -55px #aa33e6f0;
+}
+
+/* Altera o tamanho ao passar o mouse */
+.movie-card:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente o tamanho */
+    transition: all 0.4s; /* Transição suave */
+}
+
+/* Seção de informações do filme */
+.info-section {
+    position: relative; /* Define a posição relativa para permitir posicionamento absoluto dentro */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    z-index: 1; /* Coloca a seção acima de outras camadas */
+    border-radius: 10px; /* Borda arredondada */
+    background: linear-gradient(to right, #0d0d0c 50%, transparent 100%); /* Fundo gradiente */
+}
+
+/* Cabeçalho do filme */
+.movie-header {
+    position: relative; /* Define a posição relativa para permitir posicionamento absoluto dentro */
+    padding: 25px; /* Preenchimento interno */
+    height: 40%; /* Altura */
+    width: 60%; /* Largura */
+}
+
+/* Estilos para o título do filme */
+.movie-header h1 {
+    color: #fff; /* Cor do texto */
+    font-weight: 400; /* Peso da fonte */
+    margin-bottom: 0; /* Mrgem inferior */
+}
+
+/* Estilos para o subtítulo do filme */
+.movie-header h4 {
+    color: #9ac7fa; /* Cor do texto */
+    font-weight: 400; /* Peso da fonte */
+    margin: 0 0 5px 0; /* Margens */
+}
+
+/* Imagem do filme */
+.locandina {
+    position: relative; /* Define a posição relativa para permitir posicionamento absoluto dentro */
+    float: left; /* Flutua à esquerda */
+    margin-right: 20px; /* Margem direita */
+    height: 120px; /* Altura */
+    box-shadow: 0 0 20px -10px #00000080; /* Sombra */
+}
+
+/* Descrição do filme */
+.movie-desc {
+    padding: 25px; /* Preenchimento interno */
+    height: 50%; /* Altura */
+    color: #cfd6e1; /* Cor do texto */
+    width: 80%; /* Largura */
+}
+
+/* Plano de fundo desfocado */
+.blur-back {
+    position: absolute; /* Define a posição absoluta */
+    top: 0; /* Posicionamento no topo */
+    height: 100%; /* Altura total */
+    right: 0; /* Posicionamento à direita */
+    background-size: cover; /* Redimensiona a imagem para cobrir */
+    border-radius: 11px; /* Borda arredondada */
+    width: 80%; /* Largura */
+    background-position: -100% 10%; /* Posição do plano de fundo */
+}
+
+/* Estilos para o botão de curtir */
+.like-btn-style {
+    width: fit-content; /* Largura ajustada ao conteúdo */
+    background-color: inherit; /* Cor de fundo herdada */
+    padding: 0; /* Preenchimento */
+    border-radius: 0; /* Borda arredondada */
+}
+
+/* Estilos para o botão de curtir ao passar o mouse */
+.like-btn-style:hover {
+    background-color: inherit; /* Cor de fundo herdada */
+}
+
+/* Estilos para dispositivos com largura máxima de 768px */
+@media screen and (max-width: 768px) {
+    .movie-card {
+        width: 95%; /* Largura ajustada */
+        margin: 70px auto; /* Margens superior e inferior automáticas, margem lateral automática */
+        min-height: 350px; /* Altura mínima */
+        box-shadow: 0px 0px 150px -45px #aa33e6b6; /* Sombra */
+    }
+
+    .blur-back {
+        width: 100%; /* Largura ajustada */
+        background-position: 50% 50%; /* Posição do plano de fundo */
+    }
+
+    .movie-header {
+        width: 100%; /* Largura ajustada */
+        margin-top: 85px; /* Margem superior */
+    }
+
+    .movie-desc {
+        width: 100%; /* Largura ajustada */
+    }
+
+    .info-section {
+        background: linear-gradient(to top, #141413 50%, transparent 100%); /* Fundo gradiente */
+        display: inline-grid; /* Exibe como grade em linha */
+    }
+
+    .movie-card:hover {
+        box-shadow: 0px 0px 120px -55px #aa33e6f0; /* Sombra ao passar o mouse */
+    }
+}

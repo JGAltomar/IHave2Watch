@@ -1,0 +1,149 @@
+/* estilizações gerais */
+
+/* cores */
+:root {
+    --cor-primaria: #8A05BE; /* Cor primária */
+    --cor-secundaria: #F8F8FF; /* Cor secundária */
+    --cor-destaque: #ADD8E6; /* Cor de destaque */
+    --cor-texto: gray; /* Cor do texto */
+    --cor-fundo: #353839; /* Cor de fundo */
+}
+
+body {
+    background-color: black; /* Cor de fundo do corpo */
+    font-family: 'Montserrat', sans-serif; /* Fonte */
+    display: grid; /* Exibir como grade */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas iguais */
+}
+
+label {
+    font-size: 14px; /* Tamanho da fonte do rótulo */
+    color: #a0a0a0; /* Cor do rótulo */
+}
+
+h1, h2, h3, h4, p {
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+h2 {
+    font-size: 20px; /* Tamanho da fonte */
+}
+
+h3 {
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+a {
+    color: dodgerblue; /* Cor do link */
+}
+
+button {
+    background-color: var(--cor-primaria); /* Cor de fundo do botão */
+    color: var(--cor-secundaria); /* Cor do texto do botão */
+    border-radius: 25px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Preenchimento */
+    cursor: pointer; /* Cursor do mouse */
+}
+
+button:hover {
+    background-color: var(--cor-secundaria); /* Cor de fundo do botão ao passar o mouse */
+    color: var(--cor-primaria); /* Cor do texto do botão ao passar o mouse */
+}
+
+/* Corpo da página */
+
+.logo-container {
+    grid-column: 1 / 2; /* Coluna 1 */
+    text-align: center; /* Alinhamento central */
+}
+
+.form-head  {
+    grid-column: 2 / 3; /* Coluna 2 */
+    text-align: center; /* Alinhamento central */
+    margin-top: 20px; /* Margem superior */
+}
+
+.form-container {
+    display: grid; /* Exibir como grade */
+    justify-content: center; /* Justificar o conteúdo centralmente */
+    padding: 5px; /* Preenchimento */
+}
+
+.already-member {
+    font-size: 12px; /* Tamanho da fonte */
+    margin-left: 50%; /* Margem à esquerda */
+    margin-top: 25px; /* Margem superior */
+}
+
+.info {
+    padding: 10px; /* Preenchimento */
+    margin: 10px 0; /* Margem */
+    border: none; /* Sem borda */
+    border-radius: 20px; /* Borda arredondada */
+    box-sizing: border-box; /* Box-sizing */
+    resize: vertical; /* Redimensionamento vertical */
+    background-color: var(--cor-fundo); /* Cor de fundo */
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+.info::placeholder {
+    font-style: italic; /* Estilo de placeholder */
+}
+
+.active {
+    color: red; /* Cor do texto ativo */
+    font-style: italic; /* Estilo de texto ativo */
+    font-size: 14px; /* Tamanho da fonte do texto ativo */
+    display: block !important; /* Exibir como bloco */
+}
+
+.logo:hover {
+    animation: shake 0.5s; /* Animação de tremer */
+    animation-iteration-count: infinite; /* Repetição infinita */
+    cursor: pointer; /* Cursor do mouse */
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); } /* Transformação inicial */
+    /* Etapas de transformação */
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); } /* Transformação final */
+}
+
+@media (max-width: 620px) {
+    body {
+        display: grid; /* Exibir como grade */
+        grid-template-rows: 20% 20% 60%; /* Três linhas com proporções */
+        grid-template-columns: 1; /* Uma coluna */
+    }
+    .logo-container {
+        grid-row: 1 / 2; /* Linha 1 */
+        grid-column: 1 / 3; /* Colunas 1 a 3 */
+        text-align: center; /* Alinhamento central */
+    }
+    
+    .form-head  {
+        grid-row: 2 / 3; /* Linha 2 */
+        grid-column: 1 / 3; /* Colunas 1 a 3 */
+        text-align: center; /* Alinhamento central */
+        margin-top: 0; /* Margem superior */
+    }
+    
+    .form-container {
+        grid-row: 3 / 4; /* Linha 3 */
+        grid-column: 1 / 3; /* Colunas 1 a 3 */
+        display: grid; /* Exibir como grade */
+        justify-content: center; /* Justificar o conteúdo centralmente */
+        padding: 5px; /* Preenchimento */
+    }
+}

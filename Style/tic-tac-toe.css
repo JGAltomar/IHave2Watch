@@ -1,0 +1,135 @@
+/* cores */
+:root {
+    --cor-primaria: #8A05BE;
+    --cor-secundaria: #F8F8FF;
+    --cor-destaque: #ADD8E6;
+    --cor-texto: gray;
+    --cor-fundo: #353839;
+}
+
+body {
+    text-align: center;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border-radius: 25px;
+    font-size: 12px;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+p, h1, h2, .score, a {  
+    color: var(--cor-secundaria)
+}
+
+a, ul, li {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--cor-texto);
+    padding: 0;
+}
+
+.container {
+    background-color: var(--cor-fundo);
+    margin: 50px 25px 0 25px;
+    border-radius: 10px;        
+    padding: 5px 0 50px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 10%);
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.blck {
+    height: 100px;
+    border: solid 2px var(--cor-secundaria);
+    box-sizing: border-box;
+}
+
+#blck1, #blck2, #blck3 {
+    border-top: 0;
+}
+
+#blck1, #blck4, #blck7 {
+    border-left: 0;
+}
+
+#blck7, #blck8, #blck9 {
+    border-bottom: 0;
+}
+
+#blck3, #blck6, #blck9 {
+    border-right: 0;
+}
+
+.x {    
+    display: inline-block;
+    font-size: 55px;
+    color: red;
+    line-height: 100px;
+}
+
+.o {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    border: solid 5px green;
+    border-radius: 50%;
+    margin-top:25px;
+}
+
+.hide {
+    display: none;
+}
+
+.score-container {
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+.score-x {
+    color: red;
+}
+
+.score-o {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: solid 3px green;
+    border-radius: 50%;
+}
+
+.score-count-x {
+    margin-right: 3%;
+}
+
+.msg {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 265px;
+    width: 400px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-size: 40px;
+    padding: 20px;
+    border-radius: 25px;
+}

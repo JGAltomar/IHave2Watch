@@ -1,0 +1,165 @@
+/* Estilizações gerais */
+
+/* Definições de cores usando variáveis */
+:root {
+    --cor-primaria: #8A05BE; /* Cor primária para elementos de destaque */
+    --cor-secundaria: #F8F8FF; /* Cor secundária para texto e fundo */
+    --cor-destaque: #ADD8E6; /* Cor de destaque opcional */
+    --cor-texto: gray; /* Cor do texto geral */
+    --cor-fundo: #353839; /* Cor de fundo padrão */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background-color: black; /* Cor de fundo do corpo */
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão */
+    height: 100%; /* Define a altura do corpo como 100% da janela de visualização */
+}
+
+/* Estilos para cabeçalhos, parágrafos e outros elementos de texto */
+h1, h2, h3, h4, p {
+    color: var(--cor-secundaria); /* Cor do texto secundária */
+}
+
+h2 {
+    font-size: 20px; /* Tamanho da fonte para h2 */
+}
+
+h3 {
+    font-size: 18px; /* Tamanho da fonte para h3 */
+}
+
+/* Estilos para links, listas e itens de lista */
+a, ul, li {
+    text-decoration: none; /* Remover sublinhado de links */
+    list-style-type: none; /* Remover marcadores de lista */
+    color: var(--cor-texto); /* Cor do texto geral */
+    padding: 0; /* Remover preenchimento padrão */
+}
+
+/* Estilos para botões */
+button {
+    background-color: var(--cor-primaria); /* Cor de fundo dos botões */
+    color: var(--cor-secundaria); /* Cor do texto nos botões */
+    border-radius: 25px; /* Borda arredondada */
+    font-size: 12px; /* Tamanho da fonte */
+    border: none; /* Remover borda */
+    padding: 8px 20px; /* Preenchimento */
+    cursor: pointer; /* Cursor do mouse */
+}
+
+button:hover {
+    background-color: var(--cor-secundaria); /* Cor de fundo ao passar o mouse */
+    color: var(--cor-primaria); /* Cor do texto ao passar o mouse */
+}
+
+.active-page {
+    color: var(--cor-secundaria); /* Cor do texto para a página ativa */
+}
+
+/* ----- Corpo da página ----- */
+
+/* Estilo para indrodução de pesquisa */
+.search-head {
+    text-align: center; /* Alinhamento ao centro */
+    margin-top: 90px; /* Margem do topo */
+}
+
+/* Estilo para os links do search-head */
+.link-search {
+    color: var(--cor-primaria);
+}
+
+.link-search:hover {
+    cursor: pointer;
+}
+
+/* Estilos para a barra de pesquisa */
+.search {
+    display: inline-block; /* Exibição em linha */
+    position: relative; /* Posição relativa */
+    margin: 0 25%; /* Margem */
+    width: 50%; /* Largura */
+}
+
+/* Reset de estilização para o input de pesquisa */
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+/* Estilos para o botão de limpar na barra de pesquisa */
+.clear {
+    position: absolute; /* Posição absoluta */
+    right: 15px; /* Alinhamento à direita */
+    top: 8px; /* Alinhamento ao topo */
+    cursor: pointer; /* Cursor do mouse */
+    display: inline-block; /* Exibição em linha */
+    font-size: 20px; /* Tamanho da fonte */
+    color: var(--cor-secundaria); /* Cor do texto */
+    font-weight: lighter; /* Peso da fonte mais leve */
+}
+
+/* Estilos para o input de pesquisa */
+.search-input {
+    padding: 10px 26px 10px 10px; /* Preenchimento */
+    border-radius: 10px; /* Borda arredondada */
+    width: 100%; /* Largura */
+    background-color: var(--cor-fundo); /* Cor de fundo */
+    border-style: none; /* Estilo da borda */
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+/* Estilos para o texto de placeholder no input de pesquisa */
+.search-input::placeholder,
+.search-input::-webkit-input-placeholder,
+.search-input::-moz-placeholder {
+    color: var(--cor-secundaria); /* Cor do texto */
+    font-style: italic; /* Estilo da fonte itálico */
+}
+
+/* Estilos para o cabeçalho de resultados */
+.result-head {
+    color: var(--cor-secundaria); /* Cor do texto */
+    margin-top: 50px; /* Margem superior */
+    text-align: center; /* Alinhamento centralizado */
+    font-size: 90px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3, 0px 0px 20px #b393d3; /* Sombra do texto */
+    border: solid 2px var(--cor-primaria);
+    padding: 1% 0;
+}
+
+/* Animação de piscar */
+.blink {
+    animation: blink 1s steps(11, end);
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+/* ----- Footer ----- */
+
+/* Estilos para o footer */
+.footer-js {
+    position: fixed; /* Posição fixa */
+    width: 100%; /* Largura total */
+    bottom: 0; /* Alinhamento na parte inferior */
+}
+
+@media (max-width: 625px) {
+    .footer-js {
+        position: relative;
+    }
+}

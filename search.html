@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="shortcut icon" href="Icons/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Style/nav_footer.css">
+    <link rel="stylesheet" href="Style/search_style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style/movie-card_style.css">
+</head>
+
+<body id="body">
+
+    <nav id="nav-container">
+
+        <div id="menu-container">
+            <ul class="menu">
+                <!-- Menu escondido -->
+                <li class="brand">IHave2Watch</li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">☰</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="parteners.html">Partners</a>
+                        <a class="active-page" href="search.html">Explore</a>
+                        <a class="fav" href="list_overview.html" style="display: none;">My Favorites</a>
+                    </div>
+                </li>
+                <!-- Menu não escondido -->
+                <div class="static-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a>
+                    </li>
+                    <li><a href="parteners.html">Partners</a>
+                    </li>
+                    <li><a class="active-page" href="search.html">Explore</a></li>
+                    <li><a class="fav" href="list_overview.html" style="display: none;">My Favorites</a></li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="log-sub-container menu">
+            <button onclick="openLogin()" class="nav-btn">Login</button>
+            <button class="nav-btn sign-btn">Sign up</button>
+            <button id="botao-perfil"><img src="Icons/profile.svg" alt="Perfil button"></button>
+            <div id="perfil-menu">
+                <ul>
+                    <li><a href="">My Perfil</a></li>
+                    <li><a href="tic-tac-toe.html">Tic-Tac-Toe</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="idLogin" class="modal">
+
+            <div class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="closeLogin()" class="close-btn" title="Close Modal">&times;</span>
+                    <img class="avatar" src="Images/login_avatar.svg" alt="Login Avatar">
+                </div>
+
+                <div class="login-upcontainer">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="text" id="psw" placeholder="Enter Password" name="psw" required>
+                    <span id="no-match-psw">Username or password do not match! Try again!</span>
+
+                    <button id="login-btn">Login</button>
+
+                </div>
+
+                <div class="login-bottomcontainer">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <span class="psw">Forgot <a href="#">password</a> ?</span>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <p class="search-head">Search for <a class="link-search movie-search">movies</a> or <a class="link-search series-search">series</a> and add them to your favorites list!</p>
+    
+    <div class="search">
+        <input class="search-input" type="search" id="search-bar" placeholder="Search">
+        <div class="clear">x</div>
+    </div>
+    <div class="result-head movie blink" hidden>Movies</div>
+    <div class="filmes"></div>
+        <!-- O que foi encontrado da pesquisa sobre filmes-->
+    <div class="result-head tv blink" hidden>TV Shows</div>
+    <div class="series"></div>
+        <!-- O que foi encontrado da pesquisa sobre séries-->
+
+
+    <footer id="footer-container" class="footer-js">
+
+        <div>
+            <span class="brand brand-footer">IHave2Watch</span>
+            <h4 id="head-icons">Connect with us</h4>
+            <a href=""><img class="icons-index" src="Icons/Instagram-Glyph-Color-Logo.svg" alt="Instagarm icon"></a>
+            <a href=""><img class="icons-index" src="Icons/LinkedIn-Icon-Logo.svg" alt="Linkedin icon"></a>
+            <a href=""><img class="icons-index" src="Icons/YouTube-Icon-Full-Color-Logo.svg" alt="YouTube icon"></a>
+            <p><small style="color: white;">© 2024 IHave2Watch - All external content remains the property of the
+                    rightful owner.</small></p>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Our Company</h4>
+            <ul>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Community hub</h4>
+            <ul>
+                <li><a href="">Partners</a></li>
+                <li><a href="">Advertising</a></li>
+                <li><a href="">Community Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="">Support</a></li>
+                <li><a href="">Our policy</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+
+<script src="Scripts/search.js"></script>
+<script src="Scripts/logout.js"></script>

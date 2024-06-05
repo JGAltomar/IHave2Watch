@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="Style/nav_footer.css">
+    <link rel="stylesheet" href="Style/list_overview.css">
+    <link rel="shortcut icon" href="Icons/favicon.svg" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style/movie-card_style.css">
+</head>
+
+<body>
+
+    <nav id="nav-container">
+
+        <div id="menu-container">
+            <ul class="menu">
+                <!-- Menu escondido -->
+                <li class="brand">IHave2Watch</li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">☰</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="parteners.html">Partners</a>
+                        <a href="search.html">Explore</a>
+                        <a class="fav active-page" href="list_overview.html" style="display: none;">My Favorites</a>
+                    </div>
+                </li>
+                <!-- Menu não escondido -->
+                <div class="static-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a>
+                    </li>
+                    <li><a href="parteners.html">Partners</a>
+                    </li>
+                    <li><a href="search.html">Explore</a></li>
+                    <li><a class="fav active-page" href="list_overview.html" style="display: none;">My Favorites</a></li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="log-sub-container menu">
+            <button onclick="openLogin()" class="nav-btn">Login</button>
+            <button class="nav-btn sign-btn">Sign up</button>
+            <button id="botao-perfil"><img src="Icons/profile.svg" alt="Perfil button"></button>
+            <div id="perfil-menu">
+                <ul>
+                    <li><a href="">My Perfil</a></li>
+                    <li><a href="tic-tac-toe.html">Tic-Tac-Toe</a></li>
+                    <li><a href="#" id="myList">My Share Link</a></li>
+                    <li id="shareLink"></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="idLogin" class="modal">
+
+            <div class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="closeLogin()" class="close-btn" title="Close Modal">&times;</span>
+                    <img class="avatar" src="Images/login_avatar.svg" alt="Login Avatar">
+                </div>
+
+                <div class="login-upcontainer">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" id="uname" placeholder="Enter Username" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="text" id="psw" placeholder="Enter Password" required>
+                    <span id="no-match-psw">Username or password do not match! Try again!</span>
+
+                    <button id="login-btn">Login</button>
+
+                </div>
+
+                <div class="login-bottomcontainer">
+                    <label>
+                        <input id="remember" type="checkbox" checked="checked"> Remember me
+                    </label>
+                    <span class="psw">Forgot <a href="#">password</a> ?</span>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="saved-list">
+        <!-- O que foi inserido na barra de pesquisa sobre filmes-->
+        <div class="result-head movie" hidden>My Movies</div>
+        <!-- O que foi encontrado da pesquisa sobre filmes-->
+        <div class="filmes"></div>
+        <!-- O que foi inserido na barra de pesquisa sobre séries-->
+        <div class="result-head tv" hidden>My TV Shows</div>
+        <!-- O que foi encontrado da pesquisa sobre séries-->
+        <div class="series"></div>
+    </div>
+
+    <footer id="footer-container" class="footer-js">
+
+        <div>
+            <span class="brand brand-footer">IHave2Watch</span>
+            <h4 id="head-icons">Connect with us</h4>
+            <a href=""><img class="icons-index" src="Icons/Instagram-Glyph-Color-Logo.svg" alt="Instagarm icon"></a>
+            <a href=""><img class="icons-index" src="Icons/LinkedIn-Icon-Logo.svg" alt="Linkedin icon"></a>
+            <a href=""><img class="icons-index" src="Icons/YouTube-Icon-Full-Color-Logo.svg" alt="YouTube icon"></a>
+            <p><small style="color: white;">© 2024 IHave2Watch - All external content remains the property of the
+                    rightful owner.</small></p>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Our Company</h4>
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Community hub</h4>
+            <ul>
+                <li><a href="parteners.html">Partners</a></li>
+                <li><a href="">Advertising</a></li>
+                <li><a href="">Community Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="">Support</a></li>
+                <li><a href="">Our policy</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+
+<script src="Scripts/list_overview.js"></script>
+<script src="Scripts/logout.js"></script>

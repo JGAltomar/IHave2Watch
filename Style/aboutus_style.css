@@ -1,0 +1,246 @@
+/* Estilizações Gerais */
+
+/* Definição das cores usando variáveis CSS */
+:root {
+    --cor-primaria: #8A05BE; /* Cor principal, usada para elementos de destaque */
+    --cor-secundaria: #F8F8FF; /* Cor secundária, usada para texto e fundo */
+    --cor-destaque: #ADD8E6; /* Cor de destaque, opcional */
+    --cor-texto: gray; /* Cor do texto geral */
+    --cor-fundo: #353839; /* Cor de fundo padrão */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background-color: black; /* Cor de fundo do corpo */
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão */
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+/* Estilos para cabeçalhos, parágrafos e outros elementos de texto */
+h1, h2, h3, h4, p {
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+h2 {
+    font-size: 20px; /* Tamanho da fonte para h2 */
+}
+
+h3 {
+    font-size: 18px; /* Tamanho da fonte para h3 */
+    font-weight: lighter; /* Peso da fonte mais leve */
+}
+
+p {
+    font-size: 14px; /* Tamanho da fonte para parágrafos */
+}
+
+/* Estilos para links, listas e itens de lista */
+a, ul, li {
+    text-decoration: none; /* Remover sublinhado de links */
+    list-style-type: none; /* Remover marcadores de lista */
+    color: var(--cor-texto); /* Cor do texto geral */
+    padding: 0; /* Remover preenchimento padrão */
+}
+
+/* Botões */
+button {
+    background-color: var(--cor-primaria); /* Cor de fundo dos botões */
+    color: var(--cor-secundaria); /* Cor do texto nos botões */
+    border-radius: 25px; /* Borda arredondada */
+    font-size: 12px; /* Tamanho da fonte */
+    border: none; /* Remover borda */
+    padding: 8px 20px; /* Preenchimento */
+    cursor: pointer; /* Cursor do mouse */
+}
+
+button:hover {
+    background-color: var(--cor-secundaria); /* Cor de fundo ao passar o mouse */
+    color: var(--cor-primaria); /* Cor do texto ao passar o mouse */
+}
+
+.active-page {
+    color: var(--cor-secundaria); /* Cor do texto para a página ativa */
+}
+
+/* ----- Corpo da Página ----- */
+
+/* Introdução */
+.intro {
+    margin: 150px 20% 100px 20%; /* Margens da introdução */
+    text-align: center; /* Alinhamento centralizado */
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+/* Título da Marca */
+.brand-h1 {
+    padding: 0; /* Remover preenchimento */
+    margin: 0; /* Remover margem */
+}
+
+/* Subtexto */
+.subtext {
+    font-weight: lighter; /* Peso da fonte mais leve */
+    text-wrap: balance; /* Quebrar texto de forma equilibrada */
+    margin-bottom: 40px; /* Margem inferior */
+}
+
+/* Container Principal */
+.main-container {
+    background-color: var(--cor-fundo); /* Cor de fundo do container */
+    margin: 50px 25px 0 25px; /* Margens */
+    border-radius: 10px; /* Borda arredondada */
+    padding: 50px 25px 50px 25px; /* Preenchimento */
+    display: grid; /* Layout em grid */
+    grid-template-columns: auto; /* Colunas automáticas */
+    grid-template-rows: auto; /* Linhas automáticas */
+    text-align: center; /* Alinhamento centralizado */
+}
+
+/* Outras Regras */
+
+/* Espaçamento para o cabeçalho principal */
+.main-head {
+    margin-bottom: 70px; /* Margem inferior para o cabeçalho principal */
+}
+
+/* Estilos para o ambiente */
+.environment {
+    display: flex; /* Flex container para elementos do ambiente */
+    justify-content: space-between; /* Distribuição uniforme dos elementos */
+    margin-bottom: 100px; /* Margem inferior para o ambiente */
+}
+
+.environment div {
+    width: 30%; /* Largura dos elementos do ambiente */
+}
+
+/* Estilos para cabeçalhos no ambiente */
+.environment h3 {
+    text-decoration: underline var(--cor-destaque); /* Sublinhado com a cor de destaque */
+    text-underline-offset: 3px; /* Deslocamento do sublinhado */
+}
+
+@media (max-width: 600px) {
+    .environment {
+        flex-direction: column;
+        align-items: center;
+    }
+    .environment div {
+        width: 100%;
+    }
+}
+
+/* Estilos para a história */
+.story { 
+    text-wrap: balance; /* Quebra de texto equilibrada */
+    width: 70%; /* Largura da história */
+    margin: 0 auto; /* Centralização horizontal */
+}
+
+/* Estilos para o cabeçalho da equipe */
+.team-head {
+    margin-top: 100px; /* Margem superior para o cabeçalho da equipe */
+}
+
+/* Container para juntar a equipe */
+.join-team-container {
+    padding-bottom: 20px; /* Preenchimento inferior */
+    display: flex; /* Flex container */
+    justify-content: center; /* Centralização dos elementos */
+}
+
+@media (max-width: 600px) {
+    .join-team-container {
+        flex-wrap: wrap;
+    }
+    .filter-btn {
+        margin-bottom: 10px;
+    }
+}
+
+/* Botão de filtro */
+.filter-btn {
+    margin-left: 1%; /* Margem à esquerda */
+}
+
+/* Estilos para elementos ativos */
+.active {
+    background-color: var(--cor-secundaria); /* Cor de fundo */
+    color: var(--cor-primaria); /* Cor do texto */
+}
+
+/* Ícones do filtro */
+.filter-container img {
+    width: 30px; /* Largura */
+    height: 30px; /* Altura */
+    margin-top: 35px; /* Margem superior */
+}
+
+/* Div do filtro */
+.filterDiv {
+    float: left; /* Flutuação à esquerda */
+    background-color: var(--cor-destaque); /* Cor de fundo */
+    width: 180px; /* Largura */
+    height: 150px; /* Altura */
+    text-align: center; /* Centralização do texto */
+    margin: 2px; /* Margem */
+    display: none; /* Invisível por padrão */
+}
+
+.filterDiv:hover {
+    cursor: pointer; /* Cursor ao passar o mouse */
+    background-color: var(--cor-secundaria); /* Cor de fundo ao passar o mouse */
+}
+
+.filterDiv p {
+    color: var(--cor-primaria); /* Cor do texto */
+    margin-top: 40px; /* Margem superior */
+}
+
+/* Estilos para o cabeçalho do cartão */
+.card-head {
+    text-align: center; /* Centralização do texto */
+    margin-top: 100px; /* Margem superior */
+    margin-bottom: 50px; /* Margem inferior */
+}
+
+/* Estilos para o cartão */
+.card {
+    box-shadow: 0 4px 8px 0 #00000033; /* Sombra do cartão */
+    max-width: fit-content; /* Largura máxima */
+    max-height: fit-content; /* Altura máxima */
+    margin: auto; /* Centralização */
+    text-align: center; /* Centralização do texto */
+    margin-bottom: 50px; /* Margem inferior */
+}
+
+/* Estilos para a imagem do cartão */
+.card img {
+    border-radius: 15px; /* Borda arredondada */
+    height: 180px; /* Altura */
+    width: 180px; /* Largura */
+}
+
+/* Título do cartão */
+.title {
+    color: var(--cor-texto); /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* A classe "show" é adicionada aos elementos filtrados */
+.show {
+    display: block; /* Exibição */
+}
+
+/* Mensagem para senha incorreta */
+#no-match-psw {
+    color: red; /* Cor vermelha */
+    font-style: italic; /* Itálico */
+    font-size: 14px; /* Tamanho da fonte */
+    display: none; /* Oculto por padrão */
+}
+
+/* Mensagem de exibição */
+.show-msg {
+    display: block!important; /* Exibição com importância */
+}

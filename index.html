@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="Icons/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Style/index_style.css">
+    <link rel="stylesheet" href="Style/poster-card_style.css">
+    <link rel="stylesheet" href="Style/nav_footer.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav id="nav-container">
+
+        <div id="menu-container">
+            <ul class="menu">
+                <!-- Menu escondido -->
+                <li class="brand">IHave2Watch</li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">☰</a>
+                    <div class="dropdown-content">
+                        <a class="active-page" href="index.html">Home</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="parteners.html">Partners</a>
+                        <a href="search.html">Explore</a>
+                        <a class="fav" href="list_overview.html" style="display: none;">My Favorites</a>
+                    </div>
+                </li>
+                <!-- Menu não escondido -->
+                <div class="static-menu">
+                    <li><a class="active-page" href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a>
+                    </li>
+                    <li><a href="parteners.html">Partners</a>
+                    </li>
+                    <li><a href="search.html">Explore</a></li>
+                    <li><a class="fav" href="list_overview.html" style="display: none;">My Favorites</a></li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="log-sub-container menu">
+            <button onclick="openLogin()" class="nav-btn">Login</button>
+            <button class="nav-btn sign-btn">Sign up</button>
+            <button id="botao-perfil"><img src="Icons/profile.svg" alt="Perfil button"></button>
+            <div id="perfil-menu">
+                <ul>
+                    <li><a href="">My Perfil</a></li>
+                    <li><a href="tic-tac-toe.html">Tic-Tac-Toe</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="idLogin" class="modal">
+
+            <div class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="closeLogin()" class="close-btn" title="Close Modal">&times;</span>
+                    <img class="avatar" src="Images/login_avatar.svg" alt="Login Avatar">
+                </div>
+
+                <div class="login-upcontainer">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" id="uname" placeholder="Enter Username" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="text" id="psw" placeholder="Enter Password" required>
+                    <span id="no-match-psw">Username or password are invalid or do not match! Please try again or Signup!</span>
+
+                    <button id="login-btn">Login</button>
+
+                </div>
+
+                <div class="login-bottomcontainer">
+                    <label>
+                        <input id="remember" type="checkbox" checked="checked"> Remember me
+                    </label>
+                    <span class="psw">Forgot <a href="#">password</a> ?</span>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div id="main-container">
+
+        <div class="head-index">
+            <h1 style="margin-bottom: 5px;">Discover, Create your favorite list, Share with friends</h1>
+            <h1 style="margin-top: 0;">& Enjoy them anytime!</h1>
+            <h3>Start your collaborative world now</h3>
+            <button class="explore-btn">Start Exploring</button>
+        </div>
+
+        <h2 class="pre-banner-title">Trends of the week in streams!</h2>
+
+        <!-- Div atualizada ao carregar a página -->
+        <div class="banner-container"></div>
+
+
+        <div class="logos-index-container">
+            <div><a href="https://www.netflix.com/browse">
+                    <img class="logos-index logo-netflix" src="Images/Netflix-Logo.svg" alt="Netflix logo"></a>
+            </div>
+            <div><a href="https://www.primevideo.com">
+                    <img class="logos-index" src="Images/Prime_Video-Logo.svg" alt="Prime Video logo"></a>
+            </div>
+            <div><a href="https://www.apple.com/pt/apple-tv-plus/">
+                    <img class="logos-index" src="Images/Apple_TV-Logo.svg" alt="Apple TV logo"></a>
+            </div>
+            <div><a href="https://tv.apple.com/">
+                    <img class="logos-index" src="Images/HBO_Max-Logo.svg" alt="HBO MAX logo"></a>
+            </div>
+            <div><a href="https://www.disneyplus.com">
+                    <img class="logos-index" src="Images/Disney+-Logo.svg" alt="Disney+ logo"></a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer-container">
+
+        <div>
+            <span class="brand brand-footer">IHave2Watch</span>
+            <h4 id="head-icons">Connect with us</h4>
+            <a href=""><img class="icons-index" src="Icons/Instagram-Glyph-Color-Logo.svg" alt="Instagarm icon"></a>
+            <a href=""><img class="icons-index" src="Icons/LinkedIn-Icon-Logo.svg" alt="Linkedin icon"></a>
+            <a href=""><img class="icons-index" src="Icons/YouTube-Icon-Full-Color-Logo.svg" alt="YouTube icon"></a>
+            <p><small style="color: white;">© 2024 IHave2Watch - All external content remains the property of the
+                    rightful owner.</small></p>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Our Company</h4>
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Community hub</h4>
+            <ul>
+                <li><a href="parteners.html">Partners</a></li>
+                <li><a href="">Advertising</a></li>
+                <li><a href="">Community Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="">Support</a></li>
+                <li><a href="">Our policy</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+
+<script src="Scripts/index.js"></script>
+<script src="Scripts/logout.js"></script>

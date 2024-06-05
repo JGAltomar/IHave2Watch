@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="shortcut icon" href="Icons/favicon.svg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="Style/success_signup_style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img class="success-img" src="Icons/done-no-bg.gif"
+            alt="Imagem de sucesso">
+
+        <h1>Thank you for signing up!</h1>
+
+        <p>Your account has been successfully created.</p>
+
+        <span>We look forward to seeing you around!</span>
+
+        <button class="continue-btn">Coninue</button>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $(".continue-btn").click(function () {
+            document.location = "index.html";
+        })
+
+    })
+</script>

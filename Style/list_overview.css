@@ -1,0 +1,117 @@
+/* ----- Estilizações gerais ----- */
+
+/* Definição das cores usando variáveis */
+:root {
+    --cor-primaria: #8A05BE; /* Cor principal */
+    --cor-secundaria: #F8F8FF; /* Cor secundária */
+    --cor-destaque: #ADD8E6; /* Cor de destaque */
+    --cor-texto: gray; /* Cor do texto */
+    --cor-fundo: #353839; /* Cor de fundo */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background-color: black; /* Cor de fundo do corpo */
+    font-family: 'Montserrat', sans-serif; /* Fonte utilizada */
+}
+
+/* Estilos para cabeçalhos */
+h1, h2, h3, h4 {
+    color: var(--cor-secundaria); /* Cor do texto para cabeçalhos */
+}
+
+h2 {
+    font-size: 20px; /* Tamanho da fonte para h2 */
+}
+
+h3 {
+    font-size: 18px; /* Tamanho da fonte para h3 */
+}
+
+/* Estilos para links e listas */
+a, ul, li {
+    text-decoration: none; /* Remover decoração de link */
+    list-style-type: none; /* Remover estilo de lista */
+    color: var(--cor-texto); /* Cor do texto para links e listas */
+    padding: 0; /* Remover preenchimento padrão */
+}
+
+/* Estilos para botões */
+button {
+    background-color: var(--cor-primaria); /* Cor de fundo do botão */
+    color: var(--cor-secundaria); /* Cor do texto do botão */
+    border-radius: 25px; /* Borda arredondada */
+    font-size: 12px; /* Tamanho da fonte */
+    border: none; /* Remover borda */
+    padding: 8px 20px; /* Preenchimento interno */
+    cursor: pointer; /* Cursor ao passar o mouse */
+}
+
+button:hover {
+    background-color: var(--cor-secundaria); /* Cor de fundo ao passar o mouse */
+    color: var(--cor-primaria); /* Cor do texto ao passar o mouse */
+}
+
+.active-page {
+    color: var(--cor-secundaria); /* Cor do texto para páginas ativas */
+}
+
+/* ----- Corpo da Página ----- */
+
+.copy-notification {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 16px;
+}
+
+.empty-list {
+    color: #F8F8FF;
+    margin-top: 70px;
+    text-align: center;
+}
+
+/* Estilos para cabeçalho de lista */
+.list-head {
+    margin-top: 10%; /* Margem superior para o cabeçalho da lista */
+    text-align: center;
+    font-size: 50px;
+}
+
+.force-log-in {
+    color:dodgerblue;
+    cursor: pointer;
+}
+
+.force-log-in:hover {
+    color:var(--cor-secundaria);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Estilos para o cabeçalho de resultados */
+.result-head {
+    color: var(--cor-secundaria); /* Cor do texto */
+    margin-top: 50px; /* Margem superior */
+    text-align: center; /* Alinhamento centralizado */
+    font-size: 40px; /* Tamanho da fonte */
+    font-weight: 300; /* Peso da fonte */
+    text-shadow: 0px 0px 5px #30e955, 0px 0px 10px #15c745, 0px 0px 10px #075b13, 0px 0px 20px #023609; /* Sombra do texto */
+    border: solid 2px #30e955;
+    padding: 1% 0;
+}
+
+/* ----- Footer ----- */
+
+.footer-js {
+    position: fixed; /* Posição fixa */
+    width: 100%; /* Largura total */
+    bottom: 0; /* Alinhamento na parte inferior */
+}

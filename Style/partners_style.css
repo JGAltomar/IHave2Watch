@@ -1,0 +1,90 @@
+/* estilizações gerais */
+
+/* cores */
+:root {
+    --cor-primaria: #8A05BE; /* Cor principal */
+    --cor-secundaria: #F8F8FF; /* Cor secundária */
+    --cor-destaque: #ADD8E6; /* Cor de destaque */
+    --cor-texto: gray; /* Cor do texto */
+    --cor-fundo: #353839; /* Cor de fundo */
+}
+
+body {
+    background-color: black; /* Cor de fundo do corpo da página */
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão */
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    color: var(--cor-secundaria); /* Cor do texto para títulos e parágrafos */
+}
+
+h2 {
+    font-size: 20px; /* Tamanho da fonte para h2 */
+}
+
+h3 {
+    font-size: 18px; /* Tamanho da fonte para h3 */
+    font-weight: lighter; /* Peso da fonte mais leve para h3 */
+}
+
+p {
+    font-size: 14px; /* Tamanho da fonte para parágrafos */
+}
+
+a,
+ul,
+li {
+    text-decoration: none; /* Remove decoração de link */
+    list-style-type: none; /* Remove os marcadores de lista */
+    color: var(--cor-texto); /* Cor do texto para links */
+    padding: 0; /* Remove o preenchimento padrão */
+}
+
+button {
+    background-color: var(--cor-primaria); /* Cor de fundo do botão */
+    color: var(--cor-secundaria); /* Cor do texto do botão */
+    border-radius: 25px; /* Borda arredondada */
+    font-size: 12px; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    padding: 8px 20px; /* Preenchimento interno */
+    cursor: pointer; /* Cursor ao passar */
+}
+
+button:hover {
+    background-color: var(--cor-secundaria); /* Cor de fundo do botão ao passar o mouse */
+    color: var(--cor-primaria); /* Cor do texto do botão ao passar o mouse */
+}
+
+.active-page {
+    color: var(--cor-secundaria); /* Cor do texto para a página ativa */
+}
+
+/* ----- Corpo da página ------*/
+
+.page-head-container {
+    margin-top: 70px; /* Margem superior */
+    text-align: center; /* Alinhamento centralizado */
+}
+
+.tmdb-logo-container {
+    text-align: center; /* Alinhamento centralizado */
+}
+
+.tmdb-logo {
+    height: 300px; /* Altura do logotipo */
+    width: 300px; /* Largura do logotipo */
+}
+
+.info-container {
+    text-align: center; /* Alinhamento centralizado */
+    margin: 3% 0 5% 0; /* Margem */
+}
+
+.tmdb-link {
+    color: dodgerblue; /* Cor do link para o TMDB */
+    text-decoration: underline; /* Sublinhado no link */
+}

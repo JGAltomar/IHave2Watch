@@ -1,0 +1,64 @@
+/* estilizações gerais */
+
+/* cores */
+:root {
+    --cor-primaria: #8A05BE; /* Cor primária */
+    --cor-secundaria: #F8F8FF; /* Cor secundária */
+    --cor-destaque: #ADD8E6; /* Cor de destaque */
+    --cor-texto: gray; /* Cor do texto */
+    --cor-fundo: #353839; /* Cor de fundo */
+}
+
+body {
+    background-color: black; /* Cor de fundo do corpo */
+    font-family: 'Montserrat', sans-serif; /* Fonte */
+}
+
+h1, h2, h3, h4, p, span {
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+h2 {
+    font-size: 20px; /* Tamanho da fonte */
+}
+
+h3 {
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+a {
+    color: dodgerblue; /* Cor do link */
+}
+
+button {
+    background-color: var(--cor-primaria); /* Cor de fundo do botão */
+    color: var(--cor-secundaria); /* Cor do texto do botão */
+    border-radius: 25px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Preenchimento */
+    cursor: pointer; /* Cursor do mouse */
+}
+
+button:hover {
+    background-color: var(--cor-secundaria); /* Cor de fundo do botão ao passar o mouse */
+    color: var(--cor-primaria); /* Cor do texto do botão ao passar o mouse */
+}
+
+/* Corpo da página */
+
+.container {
+    display: flex; /* Exibir como flexível */
+    flex-direction: column; /* Direção da flexão */
+    align-items: center; /* Alinhamento dos itens */
+    margin-top: 10%; /* Margem superior */
+}
+
+.success-img {
+    width: 200px; /* Largura da imagem de sucesso */
+}
+
+.continue-btn {
+    margin-top: 100px; /* Margem superior do botão de continuar */
+    width: 250px; /* Largura do botão de continuar */
+}

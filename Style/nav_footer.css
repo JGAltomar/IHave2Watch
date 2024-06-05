@@ -1,0 +1,535 @@
+/* ------ NAV ------ */
+
+/* Estilos para o contêiner da barra de navegação */
+#nav-container {
+    display: flex;
+    /* Define a exibição dos itens em linha */
+    justify-content: space-between;
+    /* Distribui o espaço horizontalmente entre os itens */
+    background-color: #000000af;
+    /* Define a cor de fundo com transparência */
+    position: fixed;
+    /* Define a posição fixa para manter a barra no topo */
+    width: 99%;
+    /* Define a largura da barra de navegação */
+    top: 0;
+    /* Define o alinhamento ao topo da janela */
+    z-index: 2;
+    /* Define a ordem de empilhamento, com 1 indicando que a barra deve estar acima de outros elementos */
+}
+
+
+/* Estilos para a marca da empresa */
+.brand {
+    background-image: linear-gradient(to right, #8A05BE, #F8F8FF, #ADD8E6);
+    /* Gradiente de cores no texto */
+    -webkit-text-fill-color: transparent;
+    /* Torna o texto transparente */
+    color: black;
+    /* Cor de backup para navegadores que não suportam o gradiente */
+    background-clip: text;
+    /* Aplica o gradiente ao texto */
+    -webkit-background-clip: text;
+    /* Para navegadores baseados em WebKit */
+    margin-right: 10px;
+    /* Margem à direita */
+    padding-left: 25px;
+    /* Preenchimento à esquerda */
+}
+
+/* Estilos para o menu de navegação */
+.menu {
+    display: flex;
+    /* Exibe os itens em linha */
+    justify-content: space-around;
+    /* Distribui o espaço entre os itens */
+}
+
+/* Estilos para os links no menu */
+.menu a {
+    position: relative;
+    /* Define a posição relativa para os links */
+    margin-right: 10px;
+    /* Margem à direita */
+}
+
+/* Efeito de hover nos links do menu */
+.menu a:hover {
+    color: #F8F8FF;
+    /* Altera a cor do texto ao passar o mouse */
+}
+
+/* Linha sob os links no hover */
+.menu a:before {
+    content: "";
+    /* Adiciona conteúdo antes do link */
+    position: absolute;
+    /* Define a posição absoluta para a linha */
+    width: 100%;
+    /* Largura da linha */
+    height: 1px;
+    /* Altura da linha */
+    top: 18px;
+    /* Posição vertical da linha */
+    background-color: #ADD8E6;
+    /* Cor da linha */
+    visibility: hidden;
+    /* Torna a linha invisível inicialmente */
+    -webkit-transform: scaleX(0);
+    /* Escala horizontal inicial da linha */
+    transform: scaleX(0);
+    /* Escala horizontal inicial da linha */
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    /* Transição suave da linha */
+    transition: all 0.3s ease-in-out 0s;
+    /* Transição suave da linha */
+}
+
+/* Mostra a linha sob o link ao passar o mouse */
+a:hover:before {
+    visibility: visible;
+    /* Torna a linha visível */
+    -webkit-transform: scaleX(1);
+    /* Escala horizontal da linha */
+    transform: scaleX(1);
+    /* Escala horizontal da linha */
+}
+
+/* Itens do menu estático */
+.static-menu {
+    display: flex;
+    /* Exibe os itens em linha */
+}
+
+/* Itens do menu suspenso */
+.dropdown {
+    display: none;
+    /* Oculta os itens do menu suspenso por padrão */
+}
+
+/* Estilos para a barra de navegação quando a largura da tela é menor ou igual a 590px */
+@media (max-width: 590px) {
+
+    /* Oculta o menu estático quando a largura da tela é menor ou igual a 590px */
+    .static-menu {
+        display: none;
+    }
+
+    /* Exibe o menu suspenso quando a largura da tela é menor ou igual a 590px */
+    .dropdown {
+        display: inline-block;
+        padding-top: 9px;
+    }
+
+    /* Define o estilo do conteúdo do dropdown */
+    .dropdown-content {
+        display: none;
+        /* Inicialmente, o dropdown está oculto */
+        position: absolute;
+        /* Permite o posicionamento absoluto em relação ao elemento pai */
+        background-color: #ADD8E6;
+        /* Cor de fundo azul claro */
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        /* Adiciona sombra para dar profundidade */
+        padding: 12px 16px;
+        /* Espaçamento interno ao redor do conteúdo */
+        z-index: 1;
+        /* Garante que o dropdown apareça acima de outros elementos */
+        border-radius: 5px;
+        /* Arredonda os cantos do dropdown */
+    }
+
+
+    /* Define o estilo dos links dentro do dropdown */
+    .dropdown-content a {
+        margin: 10px;
+        /* Margem ao redor de cada link */
+        color: #8A05BE;
+        /* Cor do texto roxo */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    /* Estilo específico para a página ativa */
+    .dropdown-content .active-page {
+        color: #F8F8FF;
+        /* Cor de texto branca */
+    }
+
+    /* Estilos para os links do menu e dropbtn quando a largura da tela é menor ou igual a 590px */
+    .dropbtn {
+        color: #8A05BE;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    /* Efeito de hover para os links do menu e dropbtn quando a largura da tela é menor ou igual a 590px */
+    .dropdown:hover .dropbtn {
+        background-color: #F8F8FF;
+        color: #8A05BE;
+        border-radius: 10px 10px 0 10px;
+        padding: 4px;
+    }
+
+    /* Exibe os itens do menu suspenso quando o menu suspenso é acionado */
+    .dropdown:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Estilos para a marca da empresa quando a largura da tela é menor ou igual a 590px */
+    .brand {
+        padding-top: 18px;
+    }
+
+    .menu a:before {
+        display: none;
+    }
+}
+
+/* Estilos gerais para o botão de navegação */
+.nav-btn {
+    height: 35px;
+    margin: auto;
+    background-color: #353839;
+}
+
+/* Estilos para o botão de login/registrar */
+.sign-btn {
+    margin-right: 25px;
+    margin-left: 5px;
+    background-color: #8A05BE;
+}
+
+/* Estilos para os campos de entrada de texto e senha na janela de login */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    /* Define a largura dos campos de entrada como 100% */
+    padding: 12px 20px;
+    /* Adiciona preenchimento interno aos campos */
+    margin: 8px 0;
+    /* Adiciona margem ao redor dos campos */
+    display: flex;
+    /* Define o modo de exibição como flexível */
+    border: 1px solid #ccc;
+    /* Adiciona uma borda de 1px sólida com a cor #ccc */
+    border-radius: 20px;
+    /* Adiciona um raio de borda de 20px para tornar as bordas arredondadas */
+    box-sizing: border-box;
+    /* Garante que o tamanho total do elemento inclua padding e border */
+    background-color: #353839;
+    /* Define a cor de fundo dos campos */
+    color: #F8F8FF;
+    /* Define a cor do texto */
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilos para o texto de espaço reservado nos campos de entrada de texto e senha */
+input[type=text]::placeholder,
+input[type=password]::placeholder {
+    font-style: italic;
+    /* Define o estilo do texto como itálico */
+}
+
+/* Estilos para o contêiner da imagem na janela de login */
+.imgcontainer {
+    text-align: center;
+    /* Alinha o texto ao centro */
+    margin: 24px 0 12px 0;
+    /* Define margens superior, inferior, direita e esquerda */
+    position: relative;
+    /* Define a posição como relativa */
+}
+
+/* Estilos para a imagem de avatar na janela de login */
+img.avatar {
+    width: 40%;
+    /* Define a largura da imagem como 40% */
+    border-radius: 50%;
+    /* Adiciona um raio de borda de 50% para tornar a imagem circular */
+}
+
+/* Estilos para o contêiner superior da janela de login */
+.login-upcontainer {
+    margin: auto 15%;
+    /* Define margens superior e inferior como automáticas e laterais como 15% */
+}
+
+/* Estilos para o contêiner superior e inferior da janela de login */
+.login-upcontainer,
+.login-bottomcontainer {
+    padding: 16px;
+    /* Adiciona preenchimento interno aos contêineres */
+}
+
+/* Estilos para o link "Esqueceu sua senha?" na janela de login */
+.psw {
+    float: right;
+    /* Alinha o link à direita */
+}
+
+/* Estilos para o link "Esqueceu sua senha?" na janela de login */
+.psw a {
+    color: dodgerblue;
+    /* Define a cor do link como dodgerblue */
+    text-decoration: underline;
+    /* Adiciona uma linha de texto sublinhada */
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    /* Inicialmente oculta o modal */
+    position: fixed;
+    /* Fixa o modal na tela */
+    z-index: 1;
+    /* Define a ordem de empilhamento */
+    left: 0;
+    /* Alinha o modal à esquerda */
+    top: 0;
+    /* Alinha o modal ao topo */
+    width: 100%;
+    /* Define a largura do modal como 100% */
+    height: 100%;
+    /* Define a altura do modal como 100% */
+    overflow: auto;
+    /* Habilita a rolagem se o conteúdo exceder as dimensões */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Define uma cor de fundo escura com transparência */
+    padding-top: 60px;
+    /* Adiciona espaço acima do modal */
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+    background-color: black;
+    /* Define a cor de fundo do conteúdo do modal como preta */
+    color: #888;
+    /* Define a cor do texto dentro do modal */
+    margin: 5% auto 15% auto;
+    /* Define margens para centralizar o modal verticalmente */
+    border: 1px solid #888;
+    /* Adiciona uma borda sólida ao redor do conteúdo do modal */
+    border-radius: 15px;
+    /* Adiciona um raio de borda de 15px para tornar as bordas arredondadas */
+    width: 42%;
+    /* Define a largura do conteúdo do modal como 50% */
+}
+
+/* Estilos para o botão de fechar o modal */
+.close-btn {
+    position: absolute;
+    /* Define a posição como absoluta */
+    right: 25px;
+    /* Alinha o botão de fechar à direita */
+    top: 0;
+    /* Alinha o botão de fechar ao topo */
+    color: #8A05BE;
+    /* Define a cor do botão de fechar */
+    font-size: 35px;
+    /* Define o tamanho da fonte do botão de fechar */
+    font-weight: bold;
+    /* Define a espessura da fonte como negrito */
+}
+
+/* Estilos para o botão de fechar o modal quando hover */
+.close-btn:hover {
+    color: #F8F8FF;
+    /* Muda a cor do botão de fechar ao passar o mouse sobre ele */
+    cursor: pointer;
+    /* Muda o cursor para indicar que o botão é clicável */
+}
+
+/* Animação para o modal */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    /* Aplica uma animação de zoom */
+    animation: animatezoom 0.6s;
+    /* Aplica uma animação de zoom */
+}
+
+/* Animação para o modal - keyframes para WebKit */
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0);
+        /* Escala inicialmente o modal para 0 */
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        /* Escala o modal para 1 */
+    }
+}
+
+/* Animação para o modal - keyframes */
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+        /* Escala inicialmente o modal para 0 */
+    }
+
+    to {
+        transform: scale(1);
+        /* Escala o modal para 1 */
+    }
+}
+
+/* Estilos para o botão de perfil */
+#botao-perfil {
+    width: fit-content;
+    /* Define a largura do botão para caber no conteúdo */
+    border-radius: 0;
+    /* Remove o raio de borda */
+    margin-right: 25px;
+    /* Adiciona margem à direita */
+    padding: 0;
+    /* Remove o preenchimento interno */
+    background-color: inherit;
+    /* Herda a cor de fundo do elemento pai */
+    display: none;
+    /* Inicialmente oculta o botão de perfil */
+}
+
+/* Estilos para a imagem dentro do botão de perfil */
+#botao-perfil img {
+    width: 30px;
+    /* Define a largura da imagem como 30px */
+}
+
+/* Estilos para a mensagem de senha incorreta */
+#no-match-psw {
+    color: red;
+    /* Define a cor do texto como vermelho */
+    font-style: italic;
+    /* Define o estilo do texto como itálico */
+    font-size: 14px;
+    /* Define o tamanho da fonte como 14px */
+    padding: 5px 0 8px 0;
+    display: none;
+    /* Inicialmente oculta a mensagem */
+}
+
+/* Estilos para o elemento ativo */
+.active {
+    display: block !important;
+    /* Define o elemento como visível */
+}
+
+/* Estilos para o botão de perfil */
+
+#perfil-menu {
+    position: absolute;
+    top: 40px;
+    /* Ajuste conforme necessário */
+    right: 40px;
+    /* Ajuste conforme necessário */
+    background-color: #ADD8E6;
+    border: 1px solid #8A05BE;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    display: none;
+    /* Escondido por padrão */
+    border-radius: 5px 0 5px 5px;
+    max-width: 150px;
+}
+
+#perfil-menu a:hover::before {
+    display: none;
+}
+
+#perfil-menu {
+    text-decoration: none;
+    text-align: center;
+}
+
+#perfil-menu li a {
+    display: block;
+    padding: 10px;
+    color: #8A05BE;
+    margin: 0;
+}
+
+#perfil-menu li a:hover {
+    color: #F8F8FF;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ----- Estilos para o Footer ----- */
+
+#footer-container {
+    display: grid;
+    /* Usa um layout de grade para o footer */
+    grid-template-columns: 50% repeat(3, 1fr);
+    /* Define as colunas da grade, com a primeira coluna ocupando metade do espaço e as outras três colunas ocupando o restante */
+    background-color: #353839;
+    /* Cor de fundo do footer */
+    margin-top: 20px;
+    /* Margem superior de 20 pixels */
+    padding: 20px;
+    /* Preenchimento interno de 20 pixels */
+}
+
+.brand-footer {
+    margin-left: -25px;
+    /* Move a marca do footer para a esquerda em 25 pixels */
+}
+
+#head-icons {
+    margin-top: 60px;
+    /* Margem superior dos ícones do cabeçalho em 60 pixels */
+}
+
+.icons-index {
+    height: 25px;
+    /* Altura dos ícones de 25 pixels */
+    width: 25px;
+    /* Largura dos ícones de 25 pixels */
+}
+
+.footer-link-container li {
+    margin-bottom: 15px;
+    /* Margem inferior dos itens da lista do footer em 15 pixels */
+}
+
+.footer-link-container h4 {
+    margin-top: 0;
+    /* Remove a margem superior dos títulos do footer */
+}
+
+.footer-link-container a:hover {
+    color: #F8F8FF;
+    /* Altera a cor do texto dos links do footer quando passa o mouse sobre eles para branco */
+}
+
+/* Estilos específicos para telas com largura máxima de 625 pixels */
+@media (max-width: 625px) {
+    #footer-container {
+        display: flex;
+        /* Altera para layout flexível para o footer em telas pequenas */
+        flex-direction: column;
+        /* Define a direção da coluna para os itens do footer */
+    }
+
+    .footer-link-container {
+        display: flex;
+        /* Altera para layout flexível para a lista de links do footer */
+        flex-direction: column;
+        /* Define a direção da coluna para os itens da lista de links do footer */
+    }
+
+    .footer-link-container h4 {
+        margin-bottom: 5px;
+        /* Adiciona uma margem inferior de 5 pixels aos títulos do footer em telas pequenas */
+    }
+
+    .icons-index {
+        margin-bottom: 20px;
+        /* Adiciona uma margem inferior de 20 pixels aos ícones do footer em telas pequenas */
+    }
+}
